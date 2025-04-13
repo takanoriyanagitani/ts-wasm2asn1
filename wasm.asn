@@ -1,0 +1,19 @@
+WasmInfo DEFINITIONS ::= BEGIN
+
+	ExportedItem ::= SEQUENCE {
+		name IA5String,
+		kind IA5String
+	}
+
+	ImportedItem ::= SEQUENCE {
+		module IA5String,
+		name IA5String,
+		kind IA5String
+	}
+
+	SimpleWasmInfo ::= SEQUENCE {
+		exports SEQUENCE OF ExportedItem,
+		imports SEQUENCE OF ImportedItem
+	}
+
+END
